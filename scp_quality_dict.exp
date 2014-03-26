@@ -1,0 +1,15 @@
+#!/home/tools/bin/64/expect
+
+set src_file "zhangxiang@xxx.com:/home/work/search/rac/data/smartnews/quality_dict"
+set dest_file "quality_dict"
+set password "xxx"
+set timeout 30
+
+spawn scp $src_file $dest_file.tmp
+expect "password:"
+send "${password}\r"
+expect eof
+
+exec mv $dest_file.tmp $dest_file
+puts stdout "\[INFO\] update quality_dict succ."
+
