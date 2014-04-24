@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <launch>crontab</launch>
+    <time>15 */2 * * *</time>
+    <optional>
+        <!-- ¼Ù×°ÊÇÐ¡Ê±¼¶ÈÎÎñ£¬²»Ð´ÔòÈÏÎªÊÇÌì¼¶ÈÎÎñ -->
+        <data>
+            <signal>/smartnews_mock/${currenthour(-1)}</signal>
+            <rerun>false</rerun>
+            <timeout>0h</timeout>
+        </data>
+    </optional>
+    <alarm>
+        <email>zhangxiang04@baidu.com</email>
+        <mobile>18612270900</mobile>
+    </alarm>
+</configuration>

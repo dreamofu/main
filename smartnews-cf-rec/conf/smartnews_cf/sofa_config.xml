@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sofa>
+    <runtime>
+        <sidb>embedded@./sidb</sidb>
+        <dlclose_on_unload>true</dlclose_on_unload>
+        <default_thread_num>4</default_thread_num>
+        <rpc>
+            <server>
+                <default_port>12345</default_port>
+                <work_thread_num>8</work_thread_num>
+                <max_pending_buffer_size>5</max_pending_buffer_size>
+                <max_throughput_in>-1</max_throughput_in>
+                <max_throughput_out>-1</max_throughput_out>
+            </server>
+            <client>
+                <default_timeout>60000</default_timeout>
+                <work_thread_num>4</work_thread_num>
+                <max_pending_buffer_size>5</max_pending_buffer_size>
+                <max_throughput_in>-1</max_throughput_in>
+                <max_throughput_out>-1</max_throughput_out>
+            </client>
+        </rpc>
+        <log>
+            <imp>default</imp>
+            <init_conf>
+                <level>DEBUG</level>
+            </init_conf>
+        </log>
+    </runtime>
+</sofa>
+<srv_work_thread>
+    <imp>default</imp>
+    <init_conf>
+	<update_port>6666</update_port>
+        <thread_num>8</thread_num>
+    </init_conf>
+</srv_work_thread>
